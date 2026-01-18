@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevilNW | Minecraft VIP</title>
+<title>DevilNW</title>
 
 <style>
 body{
@@ -15,69 +16,58 @@ body{
 
 header{
     background:#7f0000;
-    padding:25px;
+    padding:30px 20px;
     text-align:center;
 }
 
-header img{
-    width:120px;
-    margin-bottom:10px;
+.logo{
+    width:140px;
+    display:block;
+    margin:0 auto 10px;
 }
 
 header h1{
     margin:0;
     color:#ff2e2e;
-    font-size:34px;
-}
-
-header p{
-    margin:5px 0 0;
-    opacity:.8;
+    font-size:36px;
 }
 
 main{
-    padding:30px;
     max-width:900px;
     margin:auto;
+    padding:40px 20px;
 }
 
 .menu{
-    display:grid;
-    grid-template-columns:1fr 1fr;
+    display:flex;
     gap:20px;
 }
 
 .box{
+    flex:1;
     background:#141414;
-    border-radius:16px;
-    padding:40px 20px;
+    padding:50px 20px;
+    border-radius:18px;
     text-align:center;
     cursor:pointer;
-    transition:.25s;
-    border:2px solid transparent;
+    transition:.3s;
+    border:2px solid #1f1f1f;
 }
 
 .box:hover{
     border-color:#ff2e2e;
-    transform:scale(1.03);
+    transform:scale(1.05);
 }
 
 .box h2{
-    margin:0;
-    font-size:26px;
     color:#ff4c4c;
-}
-
-.box p{
-    margin-top:10px;
-    opacity:.8;
+    font-size:28px;
 }
 
 footer{
     text-align:center;
     opacity:.6;
     padding:20px;
-    font-size:14px;
 }
 </style>
 </head>
@@ -85,28 +75,25 @@ footer{
 <body>
 
 <header>
-    <img src="logo.png" alt="DevilNW Logo">
+    <img src="logo.png" class="logo" alt="DevilNW Logo">
     <h1>DEVILNW</h1>
-    <p>Minecraft Satış Sitesi</p>
 </header>
 
 <main>
     <div class="menu">
-        <div class="box" onclick="window.location.href='vip.html'">
+        <div class="box" onclick="location.href='vip.html'">
             <h2>VIP’ler</h2>
-            <p>Sunucu VIP paketlerini görüntüle</p>
+            <p>Sunucu VIP paketleri</p>
         </div>
 
-        <div class="box" onclick="window.location.href='esyalar.html'">
+        <div class="box" onclick="location.href='esyalar.html'">
             <h2>Diğer Eşyalar</h2>
-            <p>Kasa anahtarı, item ve özel ürünler</p>
+            <p>Kasa anahtarı & özel itemler</p>
         </div>
     </div>
 </main>
 
-<footer>
-    © DevilNW
-</footer>
+<footer>© DevilNW</footer>
 
 </body>
 </html>
