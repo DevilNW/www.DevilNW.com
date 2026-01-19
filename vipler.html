@@ -88,10 +88,69 @@ h1{
     border-radius:10px;
     text-decoration:none;
     font-weight:600;
+    cursor:pointer;
 }
 
 .buy-btn:hover{
     opacity:.85;
+}
+
+/* POPUP */
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+}
+
+.popup-box{
+    background:#161821;
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+    max-width:400px;
+    width:90%;
+    box-shadow:0 0 30px rgba(255,0,0,.4);
+}
+
+.popup-box h3{
+    color:#ff3b3b;
+    margin-top:0;
+}
+
+.popup-box p{
+    color:#cfcfcf;
+    margin:15px 0 25px;
+}
+
+.popup-buttons a{
+    display:inline-block;
+    margin:6px;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.popup-buttons .discord{
+    background:#5865F2;
+    color:#fff;
+}
+
+.popup-buttons .close{
+    background:#333;
+    color:#fff;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    color:#777;
+    font-size:14px;
 }
 </style>
 </head>
@@ -116,50 +175,85 @@ h1{
         <h2>VIP</h2>
         <div class="features">
             • /pv 1 - /pv 4<br>
-            • /warp vip Komutu<br>
+            • /warp vip<br>
             • Özel Rank<br>
-            • 7 Günde bir Vip kiti<br>
+            • 7 günde 1 VIP kiti
         </div>
-        <a href="#" class="buy-btn">Satın Al</a>
+        <a class="buy-btn" onclick="openPopup()">Satın Al</a>
     </div>
 
     <div class="vip-card">
         <h2>MVIP</h2>
         <div class="features">
             • /pv 1 - /pv 6<br>
-            • /warp vip Komutu<br>
+            • /warp vip<br>
             • Özel Rank<br>
-            • 7 Günde bir Mvip kiti<br>
+            • 7 günde 1 MVIP kiti
         </div>
-        <a href="#" class="buy-btn">Satın Al</a>
+        <a class="buy-btn" onclick="openPopup()">Satın Al</a>
     </div>
 
     <div class="vip-card">
         <h2>MVIP+</h2>
         <div class="features">
             • /pv 1 - /pv 8<br>
-            • /warp vip Komutu<br>
+            • /warp vip<br>
             • Özel Rank<br>
-            • 7 Günde bir Mvip+ kiti<br>
+            • 7 günde 1 MVIP+ kiti
         </div>
-        <a href="#" class="buy-btn">Satın Al</a>
+        <a class="buy-btn" onclick="openPopup()">Satın Al</a>
     </div>
 
     <div class="vip-card">
         <h2>TVIP</h2>
         <div class="features">
             • /pv 1 - /pv 10<br>
-            • /warp vip Komutu<br>
+            • /warp vip<br>
             • Özel Rank<br>
-            • 7 Günde bir Tvip kiti<br>
+            • 7 günde 1 TVIP kiti
         </div>
-        <a href="#" class="buy-btn">Satın Al</a>
+        <a class="buy-btn" onclick="openPopup()">Satın Al</a>
     </div>
+
+</div>
 
 <footer>
     © DevilNW • 2026 Tüm Hakları Saklıdır.
 </footer>
 
+<!-- POPUP -->
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <h3>Satın Alma Bilgilendirmesi</h3>
+        <p>
+            Satın almak için Discord sunucumuzda<br>
+            <b>ticket açmanız gerekmektedir.</b>
+        </p>
+
+        <div class="popup-buttons">
+            <a href="https://discord.gg/G8RcrAjuRF"
+               target="_blank"
+               class="discord">
+               Discord’a Katıl
+            </a>
+
+            <a class="close" onclick="closePopup()">
+               Kapat
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+function openPopup(){
+    document.getElementById("popup").style.display="flex";
+}
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
+</script>
+
 </body>
 </html>
+
 
